@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ARRAY
+{
+    class Program
+    {
+        static void Main()
+        {
+            int[] Array = new int[5];
+            int i, j, Temp;
+            for (i = 0; i < Array.Length; i++)
+            {
+                Console.WriteLine("Donner l\'element " + i);
+
+                Array[i] = int.Parse(Console.ReadLine());
+            }
+            for (i = 0; i < Array.Length; i++)
+                for (j = i + 1; j < Array.Length; j++)
+                {
+                    if (Array[i] > Array[j])
+                    {
+                        Temp = Array[i];
+                        Array[i] = Array[j];
+                        Array[j] = Temp;
+
+                    }
+                }
+            {
+
+            }
+            for (i = 0; i < Array.Length; i++)
+            {
+                Console.WriteLine("Le tri de ces nombres par ordre croissant est : " + Array[i]);
+            }
+            Console.ReadKey();
+        }
+    }
+}
+
